@@ -1,7 +1,6 @@
-FROM node:18
-WORKDIR /usr/src/app
+FROM node:12.2.0-alpine
+WORKDIR /app
 COPY package*.json ./
-RUN npm cache clean --force
 RUN npm install
 COPY . .
 EXPOSE 3000
